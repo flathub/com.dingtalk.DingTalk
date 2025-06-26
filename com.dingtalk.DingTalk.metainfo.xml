@@ -39,6 +39,9 @@
     <category>Office</category>
   </categories>
   <releases>
+    <release version="7.6.45.5062501" date="2025-06-26">
+      <description></description>
+    </release>
     <release version="7.6.45.5041701" date="2025-04-21"/>
   </releases>
   <content_rating type="oars-1.1"/>

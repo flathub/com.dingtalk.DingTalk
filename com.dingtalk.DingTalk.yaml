@@ -46,7 +46,7 @@ modules:
       - install -Dpm644 com.dingtalk.DingTalk.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo
       - install -Dpm644 com.dingtalk.DingTalk.png -t ${FLATPAK_DEST}/share/icons/hicolor/256x256/apps
       - install -Dpm644 com.dingtalk.DingTalk.desktop -t ${FLATPAK_DEST}/share/applications
-    sources:      
+    sources:
       - type: script
         commands:
           - bsdtar -O -xf dingtalk.deb data.* | bsdtar --no-same-owner -xf -
@@ -70,20 +70,20 @@ modules:
       - type: extra-data
         filename: dingtalk.deb
         only-arches: [x86_64]
-        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.6.45.5041701_amd64.deb
-        sha256: 1d7bd5908ad0817580e4d2af71580978eb4afa4483e9adf25c90799f22cdab35
-        size: 344105224
+        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.6.45.5062501_amd64.deb
+        sha256: e3da6605db9c031532ed9a9083eb5d0eab85791fa525cce9705f26f95be1228f
+        size: 344117256
         x-checker-data:
           type: rotating-url
           url: https://www.dingtalk.com/win/d/qd=linux_amd64
           pattern: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_([0-9.]+)_amd64.deb
-      
+
       - type: extra-data
         filename: dingtalk.deb
         only-arches: [aarch64]
-        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.6.45.5041701_arm64.deb
-        sha256: f253281e23221b0a9ee36691ac7b0f7e063bf77c25dc284abbde667bb8dbcb09
-        size: 330853280
+        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.6.45.5062501_arm64.deb
+        sha256: 79b20a15f27cb37c34c865daa53598b4f4b3f1080bb0deae8e3da4f664054769
+        size: 330843176
         x-checker-data:
           type: rotating-url
           url: https://www.dingtalk.com/win/d/qd=linux_arm64
