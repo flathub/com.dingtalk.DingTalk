@@ -1,7 +1,7 @@
 id: com.dingtalk.DingTalk
-runtime: org.kde.Platform
-runtime-version: '6.9'
-sdk: org.kde.Sdk
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
 command: dingtalk
 separate-locales: false
 
@@ -15,8 +15,6 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
   # System tray icon
   - --own-name=org.kde.*
-  # Screenshot
-  - --talk-name=org.kde.kwin.Screenshot
   # File system
   - --filesystem=xdg-download
   - --filesystem=xdg-run/pipewire-0:ro
