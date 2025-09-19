@@ -27,6 +27,24 @@ cleanup:
   - '*.a'
 
 modules:
+  - name: execstack
+    buildsystem: simple
+    build-commands:
+      - bsdtar -xf execstack.rpm
+      - install -Dpsm755 -t ${FLATPAK_DEST}/bin usr/bin/execstack
+    sources:
+      - type: file
+        only-arches:
+          - x86_64
+        url: https://dl.fedoraproject.org/pub/fedora/linux/releases/42/Everything/x86_64/os/Packages/e/execstack-0.5.0-30.fc42.x86_64.rpm
+        sha256: e5f9ec5c5c7dffe90a93310e992878da5e7ac2474a46684d0b7edfdc93a80017
+        dest-filename: execstack.rpm
+      - type: file
+        only-arches:
+          - aarch64
+        url: https://dl.fedoraproject.org/pub/fedora/linux/releases/42/Everything/aarch64/os/Packages/e/execstack-0.5.0-30.fc42.aarch64.rpm
+        sha256: 2f7eb87beeae911e36734960be3047878b39e349aab961bce282836a37418307
+        dest-filename: execstack.rpm
   - name: libxcrypt
     buildsystem: autotools
     make-install-args:
@@ -56,6 +74,7 @@ modules:
           - mv opt/apps/com.alibabainc.dingtalk/files dingtalk
           - rm -rf dingtalk/*-Release.*/{libGLdispatch.so*,libGLX.so*,libm.so*,libstdc++.so*,libcurl.so*,libz.so*,Resources/qss/mac}
           - rm -rf dingtalk.deb usr opt
+          - execstack -c dingtalk/*-Release.*/dingtalk_dll.so
         dest-filename: apply_extra
 
       - type: file
