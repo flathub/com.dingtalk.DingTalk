@@ -1,6 +1,6 @@
 id: com.dingtalk.DingTalk
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: dingtalk
 separate-locales: false
@@ -32,9 +32,14 @@ modules:
     make-install-args:
       - PREFIX=/app
     sources:
-      - type: archive
-        url: https://github.com/besser82/libxcrypt/releases/download/v4.4.36/libxcrypt-4.4.36.tar.xz
-        sha256: e5e1f4caee0a01de2aee26e3138807d6d3ca2b8e67287966d1fefd65e1fd8943
+      - type: git
+        url: https://github.com/besser82/libxcrypt.git
+        tag: v4.4.38
+        commit: 55ea777e8d567e5e86ffac917c28815ac54cc341
+        x-checker-data:
+          type: git
+          url: https://api.github.com/repos/besser82/libxcrypt/releases/latest
+          tag-query: ".tag_name"
 
   - name: dingtalk
     buildsystem: simple
