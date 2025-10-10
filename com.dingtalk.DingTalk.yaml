@@ -60,7 +60,7 @@ modules:
         x-checker-data:
           type: git
           url: https://api.github.com/repos/besser82/libxcrypt/releases/latest
-          tag-query: ".tag_name"
+          tag-query: .tag_name
   - name: libleancrypto
     buildsystem: meson
     sources:
@@ -105,9 +105,9 @@ modules:
       - type: extra-data
         filename: dingtalk.deb
         only-arches: [x86_64]
-        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.6.45.5062501_amd64.deb
-        sha256: e3da6605db9c031532ed9a9083eb5d0eab85791fa525cce9705f26f95be1228f
-        size: 344117256
+        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.8.15.5092302_amd64.deb
+        sha256: 2a0a72b334bad64c54acadef4eff53cbe6587e9d3c088b57da26cdfbf01a451b
+        size: 372346568
         x-checker-data:
           type: json
           url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Update/other/amd64/linux_dingtalk_update_package_gray.json
@@ -117,9 +117,9 @@ modules:
       - type: extra-data
         filename: dingtalk.deb
         only-arches: [aarch64]
-        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.6.45.5062501_arm64.deb
-        sha256: 79b20a15f27cb37c34c865daa53598b4f4b3f1080bb0deae8e3da4f664054769
-        size: 330843176
+        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.8.15.5092302_arm64.deb
+        sha256: 9cd012e616b79d384a85ccdec62ab8c976f0fa0354747dd691cffa9aba4ff9df
+        size: 374781200
         x-checker-data:
           type: json
           url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Update/other/amd64/linux_dingtalk_update_package_gray.json
