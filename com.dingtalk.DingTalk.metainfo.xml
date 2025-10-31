@@ -39,8 +39,11 @@
     <category>Office</category>
   </categories>
   <releases>
-    <release version="7.6.45.5062501" date="2025-06-26">
+    <release version="7.8.15.5102301" date="2025-10-23">
       <description></description>
+    </release>
+    <release version="7.6.45.5062501" date="2025-06-26">
+      <description/>
     </release>
     <release version="7.6.45.5041701" date="2025-04-21"/>
   </releases>

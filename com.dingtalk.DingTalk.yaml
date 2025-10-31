@@ -60,7 +60,7 @@ modules:
         x-checker-data:
           type: git
           url: https://api.github.com/repos/besser82/libxcrypt/releases/latest
-          tag-query: ".tag_name"
+          tag-query: .tag_name
   - name: dingtalk
     buildsystem: simple
     build-commands:
@@ -94,9 +94,9 @@ modules:
       - type: extra-data
         filename: dingtalk.deb
         only-arches: [x86_64]
-        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.6.45.5062501_amd64.deb
-        sha256: e3da6605db9c031532ed9a9083eb5d0eab85791fa525cce9705f26f95be1228f
-        size: 344117256
+        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.8.15.5102301_amd64.deb
+        sha256: f0f604a3e5488dcf8bb1bf5006a3c21859c6dfeaf7795b833a5fc40620390f4c
+        size: 372399996
         x-checker-data:
           type: rotating-url
           url: https://www.dingtalk.com/win/d/qd=linux_amd64
@@ -105,9 +105,9 @@ modules:
       - type: extra-data
         filename: dingtalk.deb
         only-arches: [aarch64]
-        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.6.45.5062501_arm64.deb
-        sha256: 79b20a15f27cb37c34c865daa53598b4f4b3f1080bb0deae8e3da4f664054769
-        size: 330843176
+        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_7.8.15.5102301_arm64.deb
+        sha256: 7f82405ca1b7f47560f3d4b25aa9eb02058a0f712196d49c6e4dc888a52aa6fb
+        size: 374792312
         x-checker-data:
           type: rotating-url
           url: https://www.dingtalk.com/win/d/qd=linux_arm64
