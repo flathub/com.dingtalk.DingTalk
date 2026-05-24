@@ -7,8 +7,7 @@ elif [[ "$XMODIFIERS" =~ ibus ]]; then
     [ -z "$GTK_IM_MODULE" ] && export GTK_IM_MODULE=ibus
 fi
 
-export QT_QPA_PLATFORM="wayland;xcb"
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_QPA_PLATFORM=xcb
 export QT_PLUGIN_PATH=/app/extra/dingtalk/release:$QT_PLUGIN_PATH
 export LD_PRELOAD=/app/lib/libdingtalk_ssl_peer_certificate_shim.so${LD_PRELOAD:+:$LD_PRELOAD}
 cd "/app/extra/dingtalk/release" || exit 1
