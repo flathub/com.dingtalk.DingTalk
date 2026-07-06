@@ -7,8 +7,15 @@ elif [[ "$XMODIFIERS" =~ ibus ]]; then
     [ -z "$GTK_IM_MODULE" ] && export GTK_IM_MODULE=ibus
 fi
 
-export QT_QPA_PLATFORM=xcb
+# DingTalk does not ship the Qt Wayland platform plugin; keep it on Xwayland.
+export QT_QPA_PLATFORM="${QT_QPA_PLATFORM:-xcb}"
 export QT_PLUGIN_PATH=/app/extra/dingtalk/release:$QT_PLUGIN_PATH
-export LD_PRELOAD=/app/lib/libdingtalk_ssl_peer_certificate_shim.so${LD_PRELOAD:+:$LD_PRELOAD}
+
+dingtalk_preload=/app/lib/libdingtalk_ssl_peer_certificate_shim.so
+if [ -n "${WAYLAND_DISPLAY:-}" ] || [ "${XDG_SESSION_TYPE:-}" = "wayland" ]; then
+    dingtalk_preload=/app/lib/libdingtalk_wayland_screenshare.so:$dingtalk_preload
+fi
+export LD_PRELOAD=$dingtalk_preload${LD_PRELOAD:+:$LD_PRELOAD}
+
 cd "/app/extra/dingtalk/release" || exit 1
 ./com.alibabainc.dingtalk "$@"
