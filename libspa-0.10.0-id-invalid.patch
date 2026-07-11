@@ -1,0 +1,10 @@
+diff --git a/cargo/vendor/libspa-0.10.0/src/constants.rs b/cargo/vendor/libspa-0.10.0/src/constants.rs
+index 6a820da..097f238 100644
+--- a/cargo/vendor/libspa-0.10.0/src/constants.rs
++++ b/cargo/vendor/libspa-0.10.0/src/constants.rs
+@@ -4,4 +4,4 @@
+ //! libspa constants.
+ 
+ /// Invalid ID intended for errors or as a sentinel.
+-pub const ID_INVALID: u32 = spa_sys::SPA_ID_INVALID;
++pub const ID_INVALID: u32 = u32::MAX;
