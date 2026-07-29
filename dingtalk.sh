@@ -17,5 +17,8 @@ if [ -n "${WAYLAND_DISPLAY:-}" ] || [ "${XDG_SESSION_TYPE:-}" = "wayland" ]; the
 fi
 export LD_PRELOAD=$dingtalk_preload${LD_PRELOAD:+:$LD_PRELOAD}
 
+dtwebview_dir=/app/extra/dingtalk/release/plugins/dtwebview
+[ -d "$dtwebview_dir" ] && export LD_LIBRARY_PATH="$dtwebview_dir${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+
 cd "/app/extra/dingtalk/release" || exit 1
 ./com.alibabainc.dingtalk "$@"
