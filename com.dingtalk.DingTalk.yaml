@@ -81,7 +81,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/cagedbird043/dingtalk-wayland-screenshare.git
-        commit: 109809f698fa1a7babb7c12e60b88599456f94fb
+        commit: 59a6b7caa98b035986624e7a4cdf2893464c63bb 
       - cargo-sources.json
       - type: patch
         path: libspa-0.10.0-id-invalid.patch
