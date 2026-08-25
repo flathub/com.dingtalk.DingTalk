@@ -76,12 +76,11 @@ modules:
         LIBCLANG_PATH: /usr/lib/sdk/llvm21/lib
     build-commands:
       - cargo --offline --frozen build --release
-      - install -Dpm755 target/release/libdingtalk_wayland_screenshare.so
-        ${FLATPAK_DEST}/lib/libdingtalk_wayland_screenshare.so
+      - install -Dpm755 target/release/libdingtalk_wayland_screenshare.so ${FLATPAK_DEST}/lib/libdingtalk_wayland_screenshare.so
     sources:
       - type: git
         url: https://github.com/cagedbird043/dingtalk-wayland-screenshare.git
-        commit: 59a6b7caa98b035986624e7a4cdf2893464c63bb 
+        commit: 59a6b7caa98b035986624e7a4cdf2893464c63bb
       - cargo-sources.json
       - type: patch
         path: libspa-0.10.0-id-invalid.patch
@@ -135,9 +134,9 @@ modules:
       - type: extra-data
         filename: dingtalk.deb
         only-arches: [x86_64]
-        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_8.1.0.6021101_amd64.deb
-        sha256: ec492f12feabece34702ea47e3cfc1a164ae2e8dabdee9b05e74a3a5e4de21d5
-        size: 404869700
+        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_8.2.8.260818002_amd64.deb
+        sha256: 88dad607bbb7a72918399391c9d53aedfcfa3a6dab01f7d0659e62c1ca32678f
+        size: 374323140
         x-checker-data:
           type: rotating-url
           url: https://www.dingtalk.com/win/d/qd=linux_amd64
@@ -146,9 +145,9 @@ modules:
       - type: extra-data
         filename: dingtalk.deb
         only-arches: [aarch64]
-        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_8.1.0.6021101_arm64.deb
-        sha256: 48428f7295869815900c341867bbbd279b0eb172364287dd78bb21cedfb499ef
-        size: 405399416
+        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_8.2.8.260818002_arm64.deb
+        sha256: 22269eaadaa5e7dab6a24c1c37baf2c45a572221a3839a9ff4a487079812dabc
+        size: 375304932
         x-checker-data:
           type: rotating-url
           url: https://www.dingtalk.com/win/d/qd=linux_arm64
