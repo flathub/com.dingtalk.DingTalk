@@ -134,9 +134,9 @@ modules:
       - type: extra-data
         filename: dingtalk.deb
         only-arches: [x86_64]
-        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_8.2.8.260818002_amd64.deb
-        sha256: 88dad607bbb7a72918399391c9d53aedfcfa3a6dab01f7d0659e62c1ca32678f
-        size: 374323140
+        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_8.3.1.261008001_amd64.deb
+        sha256: 35ab680ded104abcdc53a67fcfcff2b56479997f16e8abfe11c41fbf58f5825e
+        size: 374001484
         x-checker-data:
           type: rotating-url
           url: https://www.dingtalk.com/win/d/qd=linux_amd64
@@ -145,9 +145,9 @@ modules:
       - type: extra-data
         filename: dingtalk.deb
         only-arches: [aarch64]
-        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_8.2.8.260818002_arm64.deb
-        sha256: 22269eaadaa5e7dab6a24c1c37baf2c45a572221a3839a9ff4a487079812dabc
-        size: 375304932
+        url: https://dtapp-pub.dingtalk.com/dingtalk-desktop/xc_dingtalk_update/linux_deb/Release/com.alibabainc.dingtalk_8.3.1.261008001_arm64.deb
+        sha256: 19c31e3eddec37c5b5c8adc5b12a7dbb20b9cd0416b97872477a6f865acf8603
+        size: 366713324
         x-checker-data:
           type: rotating-url
           url: https://www.dingtalk.com/win/d/qd=linux_arm64
